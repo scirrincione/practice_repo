@@ -18,22 +18,22 @@ def displayPathtoPrincess(n,grid):
         lowest = curr_distance
         if distance_calc((index_m[0]-1, index_m[1]), index_p) <= lowest:
             index_m = (index_m[0]-1, index_m[1])
-            moves += "RIGHT\n"
+            moves += "LEFT\n"
             curr_distance = distance_calc(index_m, index_p)
             lowest = curr_distance
         if distance_calc((index_m[0]+1, index_m[1]), index_p) <= lowest:
             index_m = (index_m[0]+1, index_m[1])
-            moves += "LEFT\n"
+            moves += "RIGHT\n"
             curr_distance = distance_calc(index_m, index_p)
             lowest = curr_distance
         if distance_calc((index_m[0], index_m[1]-1), index_p) <= lowest:
             index_m = (index_m[0], index_m[1]-1)
-            moves += "DOWN\n"
+            moves += "UP\n"
             curr_distance = distance_calc(index_m, index_p)
             lowest = curr_distance
         if distance_calc((index_m[0], index_m[1]+1), index_p) <= lowest:
             index_m = (index_m[0], index_m[1]+1)
-            moves += "UP\n"
+            moves += "DOWN\n"
             curr_distance = distance_calc(index_m, index_p)
             lowest = curr_distance
     print(moves)
